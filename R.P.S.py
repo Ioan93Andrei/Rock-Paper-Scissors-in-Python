@@ -8,7 +8,11 @@ def gameOn():
   player_choice = player_choice.lower()
 
   while True:
-    if computer_choice == player_choice:
+
+    if player_choice not in("rock", "paper", "scissors"):
+      print("Choice is not correct!")
+
+    elif computer_choice == player_choice:
       print("You chose the same.")
 
     elif computer_choice == "rock" and player_choice == "paper":
