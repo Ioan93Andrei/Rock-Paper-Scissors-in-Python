@@ -27,10 +27,14 @@ def gameOn():
         print(total_score)
       elif computer_choice == "rock" and player_choice == "scissors":
         print(messages.lose[0])
+        total_score -= 1
+        print(total_score)
 
       #Computer choses PAPER.
       elif computer_choice == "paper" and player_choice == "rock":
         print(messages.lose[1])
+        total_score -= 1
+        print(total_score)
       elif computer_choice == "paper" and player_choice == "scissors":
         print(messages.win[1])
         total_score += 1
@@ -43,6 +47,8 @@ def gameOn():
         print(total_score)
       elif computer_choice == "scissors" and player_choice == "paper":
         print(messages.lose[2])
+        total_score -= 1
+        print(total_score)
         
       #Asks the user if he/she wants to play again and restarts the loop if so.
       answer = input("Would you like to play again or see your score? Yes/No/Score ")
